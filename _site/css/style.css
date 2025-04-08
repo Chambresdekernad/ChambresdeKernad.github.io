@@ -387,3 +387,18 @@
 		text-decoration: none;
 		color: rgba(255,255,255,.3);
 	}	
+
+/*********************************************************************************/
+/* Logo                                                                     */
+/*********************************************************************************/
+
+	#logo-image {
+	position: absolute;
+	top: 20px;
+	right: 20px;
+	}
+
+	#logo-image img {
+		max-width: 120px; /* Adjust as needed */
+		height: auto;
+	}
