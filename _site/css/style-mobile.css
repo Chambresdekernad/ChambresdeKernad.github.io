@@ -135,6 +135,12 @@
 			#navPanel .indent-4 { display: inline-block; width: 4em; }
 			#navPanel .indent-5 { display: inline-block; width: 5em; }
 			#navPanel .depth-0 { color: #fff; }
+
+
+    /* Hide the text in the navigation links */
+    #nav a {
+        visibility: hidden; /* Hide text but keep the space occupied */
+    }
 			
 /*********************************************************************************/
 /* Header                                                                        */
@@ -145,6 +151,7 @@
 		padding: 6em 0em 4em 0em;
 		text-align: center;
 	}
+
 
 /*********************************************************************************/
 /* Logo                                                                          */
@@ -183,44 +190,7 @@
 	
 
 
-	#nav {
-        position: absolute;
-        top: 0;
-        right: 0;
-        width: 100%;
-        background: #111;
-        text-align: center;
-        padding-top: 5em;
-        height: 100vh;
-        transform: translateX(100%);
-        transition: transform 0.3s ease;
-    }
 
-    #nav ul {
-        flex-direction: column;
-        gap: 2em;
-    }
-
-    /* When nav toggle is checked, slide the menu in */
-    .nav-toggle:checked ~ #nav {
-        transform: translateX(0);
-    }
-
-    /* Animate hamburger into X */
-    .nav-toggle:checked + .nav-toggle-label span {
-        background: transparent;
-    }
-
-    .nav-toggle:checked + .nav-toggle-label span::before {
-        transform: rotate(45deg);
-        top: 0;
-    }
-
-    .nav-toggle:checked + .nav-toggle-label span::after {
-        transform: rotate(-45deg);
-        top: 0;
-    }
-}
 
 	
 /*********************************************************************************/
@@ -299,7 +269,7 @@
 	}
 
 	#logo-image img {
-		max-width: 40px;
+		max-width: 50px;
 		height: auto;
 	}
 
