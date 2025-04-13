@@ -21,21 +21,18 @@
 /* Header                                                                        */
 /*********************************************************************************/
 
-	#header
-	{
-		position: relative;
-		padding: 5em 0em;
-		text-align: center;
+	#header {
+	    position: relative;
+	    padding: 5em 0em; /* Adjust this value to move the text higher */
+	    text-align: center;
 	}
-	
-		.homepage #header
-		{
-			padding: 15em 0em;
-		}
 
-		#header .container
-		{
-		}
+	    .homepage #header {
+	        padding: 15em 0em; /* Adjust this value to move the text higher */
+	    }
+
+	    #header .container {
+	    }
 
 /*********************************************************************************/
 /* Logo                                                                          */
@@ -44,6 +41,7 @@
 	#logo
 	{
 		margin-bottom: 3em;
+		position: relative;
 	}
 	
 		#logo h1
@@ -73,12 +71,23 @@
 		}			
 			
 
+	.homepage #logo {
+		top: -11em; /* Adjust this value to move the text higher */
+	}
+
+	.homepage #logo h1 a {
+		font-size: 5em;
+	}
+
+
+
 /*********************************************************************************/
 /* Nav                                                                           */
 /*********************************************************************************/
 
 	#nav
 	{
+		position: relative;
 	}
 
 		#nav > ul > li
@@ -125,7 +134,38 @@
 				display: none;
 			}
 
+	.homepage #nav {
+		top: -11em; /* Adjust this value to move the text higher */
+	}
 
+	/* Default nav on desktop */
+	#nav ul {
+	    display: flex;
+	    justify-content: center;
+	    gap: 0.5em;
+	}
+
+	.nav-button {
+	    display: inline-flex;
+	    align-items: center;     /* Vertical centering */
+	    justify-content: center; /* Horizontal centering */
+	    padding: 0.4em 1.4em;
+	    font-weight: 600;
+	    font-size: 1em;
+	    line-height: 1.1;
+	    border-radius: 30px;
+	    background-color: #fff;
+	    color: #111;
+	    text-decoration: none;
+	    height: 2.6em; /* Optional: locks height so it’s consistent */
+	    transition: background 0.3s ease, color 0.3s ease;
+	    text-align: center;
+	}
+
+	.nav-button:hover {
+	    background-color: #eee;
+	    color: #000;
+	}
 /*********************************************************************************/
 /* Main                                                                          */
 /*********************************************************************************/
@@ -186,6 +226,7 @@
 		font-size: 1.4em;
 	}
 	
+
 /*********************************************************************************/
 /* Copyright                                                                     */
 /*********************************************************************************/
@@ -193,7 +234,14 @@
 	#copyright
 	{
 		padding: 3em 0em;
-	}		
+	}	
+
+	.homepage #copyright
+	{
+		padding: 3em 0em;
+	}	
+
+		
 
 /*********************************************************************************/
 /* Logo                                                                    */

@@ -298,18 +298,28 @@
 		background-size: cover;
 	}
 
-	#logo
-	{
+	#logo {
+    padding-top: 10px; /* Adjust this value to move the text higher */
 	}
+
+	    #logo h1 a, #logo span {
+	        line-height: 1.2em; /* Adjust this value to move the text higher */
+	    }
 	
 	#nav
 	{
+		padding-top: 10px; /* Adjust this value to move the text higher */
 	}
 
 		#nav ul
 		{
 			margin: 0;
+
 		}
+
+	    #nav ul li a {
+	        line-height: 1.2em; /* Adjust this value to move the text higher */
+	    }		
 	
 /*********************************************************************************/
 /* Banner                                                                        */
@@ -353,7 +363,7 @@
 /* Footer                                                                        */
 /*********************************************************************************/
 	
-	#footer
+#footer
 	{
 		position: relative;
 		background: #1d1d1d;
@@ -364,29 +374,41 @@
 		display: block;
 		color: #FFF;
 	}
-	
+
+
+
 /*********************************************************************************/
 /* Copyright                                                                     */
 /*********************************************************************************/
 	
-	#copyright
-	{
-		position: relative;
-		padding: 3em 0em;
-		letter-spacing: 1px;
-		text-align: center;
-		color: rgba(255,255,255,.2);
-	}
-	
-	#copyright .container
-	{
-	}
-	
-	#copyright a
-	{
-		text-decoration: none;
-		color: rgba(255,255,255,.3);
-	}	
+#copyright {
+    position: relative;
+    padding: 3em 0em;
+    letter-spacing: 1px;
+    text-align: center;
+    color: rgba(255, 255, 255, .2);
+}
+
+#copyright .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#copyright p {
+    margin: 0.5em 0;
+}
+
+#copyright a {
+    text-decoration: none;
+    color: rgba(255, 255, 255, .3);
+}
+
+#copyright a:hover {
+    color: #fff; /* On hover, make the link brighter */
+}
+
+
 
 /*********************************************************************************/
 /* Logo                                                                     */
@@ -402,3 +424,47 @@
 		max-width: 120px; /* Adjust as needed */
 		height: auto;
 	}
+
+
+/*********************************************************************************/
+/* Nav button                                                                     */
+/*********************************************************************************/
+
+
+/* Hide the checkbox */
+.nav-toggle {
+    display: none;
+}
+
+/* Hamburger Icon */
+.nav-toggle-label {
+    display: none;
+    position: absolute;
+    top: 1.5em;
+    right: 1.5em;
+    height: 2em;
+    width: 2em;
+    cursor: pointer;
+    z-index: 1001;
+}
+
+.nav-toggle-label span,
+.nav-toggle-label span::before,
+.nav-toggle-label span::after {
+    content: '';
+    display: block;
+    height: 2px;
+    width: 25px;
+    background: white;
+    position: absolute;
+    transition: all 0.3s ease;
+}
+
+.nav-toggle-label span::before {
+    top: -8px;
+}
+
+.nav-toggle-label span::after {
+    top: 8px;
+}
+
